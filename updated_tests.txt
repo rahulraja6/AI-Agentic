@@ -1,0 +1,140 @@
+test_balance_inquiry_is_detected (test_banking_agent.BankingAgentTests.test_balance_inquiry_is_detected) ... INFO:banking_agent:Handling request: What is my account balance?
+ok
+test_card_theft_and_transfer_prefers_card_block (test_banking_agent.BankingAgentTests.test_card_theft_and_transfer_prefers_card_block) ... INFO:banking_agent:Handling request: My card was stolen and I need to transfer money.
+ok
+test_complex_multi_intent_request_is_ranked (test_banking_agent.BankingAgentTests.test_complex_multi_intent_request_is_ranked) ... INFO:banking_agent:Handling request: My card was stolen, I need to transfer money, and I also want to check my loan status.
+ok
+test_empty_input_returns_unknown (test_banking_agent.BankingAgentTests.test_empty_input_returns_unknown) ... INFO:banking_agent:Handling request:    
+ok
+test_load_config_reads_json_files (test_banking_agent.BankingAgentTests.test_load_config_reads_json_files) ... ok
+test_loan_query_is_detected (test_banking_agent.BankingAgentTests.test_loan_query_is_detected) ... INFO:banking_agent:Handling request: What is my loan status?
+ok
+test_pin_reset_is_detected (test_banking_agent.BankingAgentTests.test_pin_reset_is_detected) ... INFO:banking_agent:Handling request: I forgot my PIN and need a reset
+ok
+test_secondary_intent_is_present_for_mixed_request (test_banking_agent.BankingAgentTests.test_secondary_intent_is_present_for_mixed_request) ... INFO:banking_agent:Handling request: I lost my card and also need to transfer money
+ok
+test_semantic_classifier_can_be_selected_via_config (test_banking_agent.BankingAgentTests.test_semantic_classifier_can_be_selected_via_config) ... INFO:sentence_transformers.base.model:No device provided, using cpu
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json "HTTP/1.1 200 OK"
+INFO:sentence_transformers.base.model:Loading SentenceTransformer model from sentence-transformers/all-mpnet-base-v2.
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/README.md "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/sentence_bert_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+Input: What is my account balance?
+Output: {'primaryIntent': 'BALANCE_INQUIRY', 'secondaryIntent': None, 'confidence': 0.95, 'requiresAuthentication': True, 'response': 'I can help with your balance inquiry. Please authenticate to continue.', 'reason': 'Detected 2 matching keyword(s): balance, account balance', 'matchedKeywords': ['balance', 'account balance'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:33.057757+00:00', 'processingTimeMs': 0}}
+Input: My card was stolen and I need to transfer money.
+Output: {'primaryIntent': 'CARD_BLOCK', 'secondaryIntent': 'FUND_TRANSFER', 'confidence': 0.85, 'requiresAuthentication': True, 'response': 'I can help block your card. Authentication is required.', 'reason': 'Detected 1 matching keyword(s): card was stolen', 'matchedKeywords': ['card was stolen'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:33.058763+00:00', 'processingTimeMs': 0}}
+Input: My card was stolen, I need to transfer money, and I also want to check my loan status.
+Output: {'primaryIntent': 'LOAN_QUERY', 'secondaryIntent': 'CARD_BLOCK', 'confidence': 0.95, 'requiresAuthentication': True, 'response': 'I can provide loan information. If this is about your account, authentication may be required.', 'reason': 'Detected 2 matching keyword(s): loan, loan status', 'matchedKeywords': ['loan', 'loan status'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:33.059758+00:00', 'processingTimeMs': 0}}
+Input:    
+Output: {'primaryIntent': 'UNKNOWN', 'secondaryIntent': None, 'confidence': 0.0, 'requiresAuthentication': False, 'response': 'I am sorry, I did not understand your request. Can you please clarify?', 'reason': 'No input provided.', 'matchedKeywords': [], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:33.062758+00:00', 'processingTimeMs': 0}}
+Input: What is my loan status?
+Output: {'primaryIntent': 'LOAN_QUERY', 'secondaryIntent': None, 'confidence': 0.95, 'requiresAuthentication': True, 'response': 'I can provide loan information. If this is about your account, authentication may be required.', 'reason': 'Detected 2 matching keyword(s): loan, loan status', 'matchedKeywords': ['loan', 'loan status'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:33.063757+00:00', 'processingTimeMs': 0}}
+Input: I forgot my PIN and need a reset
+Output: {'primaryIntent': 'PIN_RESET', 'secondaryIntent': None, 'confidence': 0.85, 'requiresAuthentication': True, 'response': 'I can help reset your PIN. Please authenticate first.', 'reason': 'Detected 1 matching keyword(s): forgot my pin', 'matchedKeywords': ['forgot my pin'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:33.064758+00:00', 'processingTimeMs': 0}}
+Input: I lost my card and also need to transfer money
+Output: {'primaryIntent': 'CARD_BLOCK', 'secondaryIntent': 'FUND_TRANSFER', 'confidence': 0.85, 'requiresAuthentication': True, 'response': 'I can help block your card. Authentication is required.', 'reason': 'Detected 1 matching keyword(s): lost my card', 'matchedKeywords': ['lost my card'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:33.064758+00:00', 'processingTimeMs': 0}}
+C:\Users\ra282\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py:580: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  if rate and total else datetime.utcfromtimestamp(0))
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 8634.36it/s]
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2 "HTTP/1.1 200 OK"
+C:\Users\ra282\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py:580: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  if rate and total else datetime.utcfromtimestamp(0))
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 71.38it/s]
+ok
+test_semantic_classifier_works_with_diverse_natural_utterances (test_banking_agent.BankingAgentTests.test_semantic_classifier_works_with_diverse_natural_utterances) ... INFO:sentence_transformers.base.model:No device provided, using cpu
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json "HTTP/1.1 200 OK"
+INFO:sentence_transformers.base.model:Loading SentenceTransformer model from sentence-transformers/all-mpnet-base-v2.
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/README.md "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/sentence_bert_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+C:\Users\ra282\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py:580: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  if rate and total else datetime.utcfromtimestamp(0))
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 64269.38it/s]
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2 "HTTP/1.1 200 OK"
+C:\Users\ra282\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py:580: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  if rate and total else datetime.utcfromtimestamp(0))
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 71.38it/s]
+Input: Show me my current balance
+Output: [{'intent': 'BALANCE_INQUIRY', 'confidence': 0.9, 'reason': "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['Show me my current balance', 'What is my account balance?']", 'matchedKeywords': ['Show me my current balance', 'What is my account balance?']}, {'intent': 'LOAN_QUERY', 'confidence': 0.6813021421432495, 'reason': "Semantic match to intent 'LOAN_QUERY' with top example(s): ['How much do I owe on my loan?', 'Tell me about my mortgage']", 'matchedKeywords': ['How much do I owe on my loan?', 'Tell me about my mortgage']}, {'intent': 'FUND_TRANSFER', 'confidence': 0.6730347871780396, 'reason': "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account', 'Move funds to my savings']", 'matchedKeywords': ['I need to transfer money to another account', 'Move funds to my savings']}, {'intent': 'PIN_RESET', 'confidence': 0.6144720196723938, 'reason': "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']", 'matchedKeywords': ['I forgot my PIN', 'I need to reset my PIN']}, {'intent': 'CARD_BLOCK', 'confidence': 0.6076446771621704, 'reason': "Semantic match to intent 'CARD_BLOCK' with top example(s): ['I need to block my credit card']", 'matchedKeywords': ['I need to block my credit card']}]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 62.49it/s]
+Input: Please transfer funds to my savings account
+Output: [{'intent': 'FUND_TRANSFER', 'confidence': 0.7859904527664185, 'reason': "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['Move funds to my savings', 'I need to transfer money to another account']", 'matchedKeywords': ['Move funds to my savings', 'I need to transfer money to another account']}, {'intent': 'BALANCE_INQUIRY', 'confidence': 0.6650907516479492, 'reason': "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']", 'matchedKeywords': ['What is my account balance?', 'Show me my current balance']}, {'intent': 'LOAN_QUERY', 'confidence': 0.6207279801368714, 'reason': "Semantic match to intent 'LOAN_QUERY' with top example(s): ['Tell me about my mortgage']", 'matchedKeywords': ['Tell me about my mortgage']}, {'intent': 'PIN_RESET', 'confidence': 0.6083472967147827, 'reason': "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN']", 'matchedKeywords': ['I forgot my PIN']}, {'intent': 'CARD_BLOCK', 'confidence': 0.6022438883781434, 'reason': "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen']", 'matchedKeywords': ['My card was stolen']}]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 66.66it/s]
+Input: I need to report my lost card immediately
+Output: [{'intent': 'CARD_BLOCK', 'confidence': 0.8291719913482667, 'reason': "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']", 'matchedKeywords': ['My card was stolen', 'Report a lost debit card']}, {'intent': 'PIN_RESET', 'confidence': 0.7060288429260254, 'reason': "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']", 'matchedKeywords': ['I forgot my PIN', 'I need to reset my PIN']}, {'intent': 'BALANCE_INQUIRY', 'confidence': 0.6363948106765747, 'reason': "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']", 'matchedKeywords': ['What is my account balance?', 'Show me my current balance']}, {'intent': 'FUND_TRANSFER', 'confidence': 0.6105912685394287, 'reason': "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account']", 'matchedKeywords': ['I need to transfer money to another account']}, {'intent': 'LOAN_QUERY', 'confidence': 0.5988020181655884, 'reason': "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']", 'matchedKeywords': []}]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.55it/s]
+Input: I cannot remember my PIN
+Output: [{'intent': 'PIN_RESET', 'confidence': 0.8762024641036987, 'reason': "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']", 'matchedKeywords': ['I forgot my PIN', 'I need to reset my PIN']}, {'intent': 'CARD_BLOCK', 'confidence': 0.6935965418815613, 'reason': "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']", 'matchedKeywords': ['My card was stolen', 'Report a lost debit card']}, {'intent': 'BALANCE_INQUIRY', 'confidence': 0.6209160566329956, 'reason': "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']", 'matchedKeywords': ['What is my account balance?', 'Show me my current balance']}, {'intent': 'LOAN_QUERY', 'confidence': 0.5690054714679718, 'reason': "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']", 'matchedKeywords': []}, {'intent': 'FUND_TRANSFER', 'confidence': 0.5623992323875427, 'reason': "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['none']", 'matchedKeywords': []}]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 66.63it/s]
+ok
+test_transfer_only_returns_fund_transfer (test_banking_agent.BankingAgentTests.test_transfer_only_returns_fund_transfer) ... INFO:banking_agent:Handling request: I need to transfer money to my brother
+ok
+test_unknown_request_returns_unknown_intent (test_banking_agent.BankingAgentTests.test_unknown_request_returns_unknown_intent) ... INFO:banking_agent:Handling request: Hello there!
+ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 11.342s
+
+OK
+Input: How much do I still owe on my loan?
+Output: [{'intent': 'LOAN_QUERY', 'confidence': 0.8752121925354004, 'reason': "Semantic match to intent 'LOAN_QUERY' with top example(s): ['How much do I owe on my loan?', 'What is the status of my loan?']", 'matchedKeywords': ['How much do I owe on my loan?', 'What is the status of my loan?']}, {'intent': 'BALANCE_INQUIRY', 'confidence': 0.7090601444244384, 'reason': "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'How much money do I have in my account?']", 'matchedKeywords': ['What is my account balance?', 'How much money do I have in my account?']}, {'intent': 'CARD_BLOCK', 'confidence': 0.5762694478034973, 'reason': "Semantic match to intent 'CARD_BLOCK' with top example(s): ['none']", 'matchedKeywords': []}, {'intent': 'FUND_TRANSFER', 'confidence': 0.5694474220275879, 'reason': "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['none']", 'matchedKeywords': []}, {'intent': 'PIN_RESET', 'confidence': 0.5622436940670014, 'reason': "Semantic match to intent 'PIN_RESET' with top example(s): ['none']", 'matchedKeywords': []}]
+Input: I need to transfer money to my brother
+Output: {'primaryIntent': 'FUND_TRANSFER', 'secondaryIntent': None, 'confidence': 0.75, 'requiresAuthentication': True, 'response': 'I can help schedule a fund transfer. Please authenticate first.', 'reason': 'Detected 1 matching keyword(s): transfer', 'matchedKeywords': ['transfer'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:44.394971+00:00', 'processingTimeMs': 0}}
+Input: Hello there!
+Output: {'primaryIntent': 'UNKNOWN', 'secondaryIntent': None, 'confidence': 0.0, 'requiresAuthentication': False, 'response': 'I am sorry, I did not understand your request. Can you please clarify?', 'reason': 'No matching intent keywords found.', 'matchedKeywords': [], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T03:03:44.396971+00:00', 'processingTimeMs': 0}}

@@ -1,0 +1,120 @@
+{
+  "rule": [
+    {
+      "intent": "CARD_BLOCK",
+      "confidence": 0.8125,
+      "reason": "Detected 1 matching keyword(s): card was stolen",
+      "matchedKeywords": [
+        "card was stolen"
+      ]
+    },
+    {
+      "intent": "FUND_TRANSFER",
+      "confidence": 0.7374999999999999,
+      "reason": "Detected 1 matching keyword(s): transfer",
+      "matchedKeywords": [
+        "transfer"
+      ]
+    }
+  ],
+  "semantic": [
+    {
+      "intent": "FUND_TRANSFER",
+      "confidence": 0.6900386571884155,
+      "reason": "Semantic match to intent 'FUND_TRANSFER' with top pattern(s): ['transfer', 'send .*money']",
+      "matchedKeywords": [
+        "transfer",
+        "send .*money"
+      ]
+    },
+    {
+      "intent": "BALANCE_INQUIRY",
+      "confidence": 0.6494669824838638,
+      "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top pattern(s): ['how much (do )?i owe']",
+      "matchedKeywords": [
+        "how much (do )?i owe"
+      ]
+    },
+    {
+      "intent": "PIN_RESET",
+      "confidence": 0.6435927361249923,
+      "reason": "Semantic match to intent 'PIN_RESET' with top pattern(s): ['none']",
+      "matchedKeywords": []
+    },
+    {
+      "intent": "LOAN_QUERY",
+      "confidence": 0.6418228060007095,
+      "reason": "Semantic match to intent 'LOAN_QUERY' with top pattern(s): ['repayment']",
+      "matchedKeywords": [
+        "repayment"
+      ]
+    },
+    {
+      "intent": "CARD_BLOCK",
+      "confidence": 0.6334621518850326,
+      "reason": "Semantic match to intent 'CARD_BLOCK' with top pattern(s): ['none']",
+      "matchedKeywords": []
+    }
+  ],
+  "compare": {
+    "avg_time_ms_a": 0.01985599985346198,
+    "avg_time_ms_b": 7.511716000153683,
+    "sample_output_a": [
+      {
+        "intent": "CARD_BLOCK",
+        "confidence": 0.8125,
+        "reason": "Detected 1 matching keyword(s): card was stolen",
+        "matchedKeywords": [
+          "card was stolen"
+        ]
+      },
+      {
+        "intent": "FUND_TRANSFER",
+        "confidence": 0.7374999999999999,
+        "reason": "Detected 1 matching keyword(s): transfer",
+        "matchedKeywords": [
+          "transfer"
+        ]
+      }
+    ],
+    "sample_output_b": [
+      {
+        "intent": "FUND_TRANSFER",
+        "confidence": 0.6900386571884155,
+        "reason": "Semantic match to intent 'FUND_TRANSFER' with top pattern(s): ['transfer', 'send .*money']",
+        "matchedKeywords": [
+          "transfer",
+          "send .*money"
+        ]
+      },
+      {
+        "intent": "BALANCE_INQUIRY",
+        "confidence": 0.6494669824838638,
+        "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top pattern(s): ['how much (do )?i owe']",
+        "matchedKeywords": [
+          "how much (do )?i owe"
+        ]
+      },
+      {
+        "intent": "PIN_RESET",
+        "confidence": 0.6435927361249923,
+        "reason": "Semantic match to intent 'PIN_RESET' with top pattern(s): ['none']",
+        "matchedKeywords": []
+      },
+      {
+        "intent": "LOAN_QUERY",
+        "confidence": 0.6418228060007095,
+        "reason": "Semantic match to intent 'LOAN_QUERY' with top pattern(s): ['repayment']",
+        "matchedKeywords": [
+          "repayment"
+        ]
+      },
+      {
+        "intent": "CARD_BLOCK",
+        "confidence": 0.6334621518850326,
+        "reason": "Semantic match to intent 'CARD_BLOCK' with top pattern(s): ['none']",
+        "matchedKeywords": []
+      }
+    ]
+  }
+}

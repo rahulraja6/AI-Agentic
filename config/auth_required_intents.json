@@ -1,0 +1,6 @@
+[
+  "BALANCE_INQUIRY",
+  "FUND_TRANSFER",
+  "CARD_BLOCK",
+  "PIN_RESET"
+]

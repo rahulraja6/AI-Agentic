@@ -1,0 +1,457 @@
+{
+  "per_text": [
+    {
+      "text": "My card was stolen and I need to transfer money.",
+      "rule": [
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.85,
+          "reason": "Detected 1 matching keyword(s): card was stolen",
+          "matchedKeywords": [
+            "card was stolen"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.75,
+          "reason": "Detected 1 matching keyword(s): transfer",
+          "matchedKeywords": [
+            "transfer"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.9047234535217286,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+          "matchedKeywords": [
+            "My card was stolen",
+            "Report a lost debit card"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.8921468257904053,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account', 'Move funds to my savings']",
+          "matchedKeywords": [
+            "I need to transfer money to another account",
+            "Move funds to my savings"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.6824688196182251,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "Show me my current balance"
+          ]
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.6793576717376709,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']",
+          "matchedKeywords": [
+            "I forgot my PIN",
+            "I need to reset my PIN"
+          ]
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.586233189702034,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    },
+    {
+      "text": "What is my account balance?",
+      "rule": [
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.95,
+          "reason": "Detected 2 matching keyword(s): account balance, balance",
+          "matchedKeywords": [
+            "balance",
+            "account balance"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.95,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'How much money do I have in my account?']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "How much money do I have in my account?"
+          ]
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.8471990108489991,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['How much do I owe on my loan?', 'Tell me about my mortgage']",
+          "matchedKeywords": [
+            "How much do I owe on my loan?",
+            "Tell me about my mortgage"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.7586205065250397,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account', 'Move funds to my savings']",
+          "matchedKeywords": [
+            "I need to transfer money to another account",
+            "Move funds to my savings"
+          ]
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.6965301215648652,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+          "matchedKeywords": [
+            "My card was stolen",
+            "Report a lost debit card"
+          ]
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.694696170091629,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']",
+          "matchedKeywords": [
+            "I forgot my PIN",
+            "I need to reset my PIN"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "I forgot my PIN and need a reset",
+      "rule": [
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.85,
+          "reason": "Detected 1 matching keyword(s): forgot my pin",
+          "matchedKeywords": [
+            "forgot my pin"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.95,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I need to reset my PIN', 'I forgot my PIN']",
+          "matchedKeywords": [
+            "I need to reset my PIN",
+            "I forgot my PIN"
+          ]
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.7667933583259583,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+          "matchedKeywords": [
+            "My card was stolen",
+            "Report a lost debit card"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.6512871742248535,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?']",
+          "matchedKeywords": [
+            "What is my account balance?"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.6063514292240143,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.5798649102449417,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    },
+    {
+      "text": "What is my loan status?",
+      "rule": [
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.95,
+          "reason": "Detected 2 matching keyword(s): loan, loan status",
+          "matchedKeywords": [
+            "loan",
+            "loan status"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.95,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['What is the status of my loan?', 'How much do I owe on my loan?']",
+          "matchedKeywords": [
+            "What is the status of my loan?",
+            "How much do I owe on my loan?"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.741259765625,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'How much money do I have in my account?']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "How much money do I have in my account?"
+          ]
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.6384320259094238,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.5880457729101181,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.583041888475418,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    },
+    {
+      "text": "Hello there!",
+      "rule": [
+        {
+          "intent": "UNKNOWN",
+          "confidence": 0.0,
+          "reason": "No matching intent keywords found.",
+          "matchedKeywords": []
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.5788153886795044,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.5784883826971055,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.5778956055641175,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.5660380512475968,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.5553201362490654,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    },
+    {
+      "text": "Please transfer funds to my savings account",
+      "rule": [
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.75,
+          "reason": "Detected 1 matching keyword(s): transfer",
+          "matchedKeywords": [
+            "transfer"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.9289856791496276,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['Move funds to my savings', 'I need to transfer money to another account']",
+          "matchedKeywords": [
+            "Move funds to my savings",
+            "I need to transfer money to another account"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.7476361274719239,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "Show me my current balance"
+          ]
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.681091970205307,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['Tell me about my mortgage']",
+          "matchedKeywords": [
+            "Tell me about my mortgage"
+          ]
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.6625209450721741,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN']",
+          "matchedKeywords": [
+            "I forgot my PIN"
+          ]
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.6533658325672149,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen']",
+          "matchedKeywords": [
+            "My card was stolen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "I need to report my lost card immediately",
+      "rule": [
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.7999999999999999,
+          "reason": "Detected 1 matching keyword(s): lost card",
+          "matchedKeywords": [
+            "lost card"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.95,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+          "matchedKeywords": [
+            "My card was stolen",
+            "Report a lost debit card"
+          ]
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.8090432643890381,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']",
+          "matchedKeywords": [
+            "I forgot my PIN",
+            "I need to reset my PIN"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.7045922160148621,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "Show me my current balance"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.6658869028091431,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account']",
+          "matchedKeywords": [
+            "I need to transfer money to another account"
+          ]
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.6482030272483825,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    }
+  ],
+  "compare": {
+    "avg_time_ms_a": 0.019248571230231652,
+    "avg_time_ms_b": 23.800627142814587,
+    "sample_output_a": [
+      {
+        "intent": "CARD_BLOCK",
+        "confidence": 0.85,
+        "reason": "Detected 1 matching keyword(s): card was stolen",
+        "matchedKeywords": [
+          "card was stolen"
+        ]
+      },
+      {
+        "intent": "FUND_TRANSFER",
+        "confidence": 0.75,
+        "reason": "Detected 1 matching keyword(s): transfer",
+        "matchedKeywords": [
+          "transfer"
+        ]
+      }
+    ],
+    "sample_output_b": [
+      {
+        "intent": "CARD_BLOCK",
+        "confidence": 0.9047234535217286,
+        "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+        "matchedKeywords": [
+          "My card was stolen",
+          "Report a lost debit card"
+        ]
+      },
+      {
+        "intent": "FUND_TRANSFER",
+        "confidence": 0.8921468257904053,
+        "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account', 'Move funds to my savings']",
+        "matchedKeywords": [
+          "I need to transfer money to another account",
+          "Move funds to my savings"
+        ]
+      },
+      {
+        "intent": "BALANCE_INQUIRY",
+        "confidence": 0.6824688196182251,
+        "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']",
+        "matchedKeywords": [
+          "What is my account balance?",
+          "Show me my current balance"
+        ]
+      },
+      {
+        "intent": "PIN_RESET",
+        "confidence": 0.6793576717376709,
+        "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']",
+        "matchedKeywords": [
+          "I forgot my PIN",
+          "I need to reset my PIN"
+        ]
+      },
+      {
+        "intent": "LOAN_QUERY",
+        "confidence": 0.586233189702034,
+        "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+        "matchedKeywords": []
+      }
+    ]
+  }
+}

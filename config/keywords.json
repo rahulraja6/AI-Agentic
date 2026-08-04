@@ -1,0 +1,35 @@
+{
+  "BALANCE_INQUIRY": [
+    "balance",
+    "how much (do )?i owe",
+    "available funds",
+    "account (balance|total|amount)"
+  ],
+  "FUND_TRANSFER": [
+    "transfer",
+    "send .*money",
+    "pay .*to",
+    "move .*funds",
+    "wire"
+  ],
+  "CARD_BLOCK": [
+    "\\b(block|blocked|freeze|frozen|disable|disabled)\\b.*\\bcard\\b",
+    "\\bcard\\b.*\\b(stolen|lost|missing|misplaced)\\b",
+    "\\b(stolen|lost|missing|misplaced)\\b.*\\bcard\\b",
+    "\\bcard\\b.*\\b(block|blocked|freeze|frozen|disable|disabled)\\b",
+    "\\b(block|blocked|freeze|frozen|disable|disabled)\\b.*\\bcard\\b"
+  ],
+  "PIN_RESET": [
+    "reset .*pin",
+    "forgot .*pin",
+    "change .*pin",
+    "new .*pin"
+  ],
+  "LOAN_QUERY": [
+    "loan",
+    "mortgage",
+    "interest rate",
+    "loan status",
+    "repayment"
+  ]
+}

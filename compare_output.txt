@@ -1,0 +1,573 @@
+INFO:sentence_transformers.base.model:No device provided, using cpu
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json "HTTP/1.1 200 OK"
+INFO:sentence_transformers.base.model:Loading SentenceTransformer model from sentence-transformers/all-mpnet-base-v2.
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config_sentence_transformers.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/README.md "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/modules.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/sentence_bert_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 7055.39it/s]
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-mpnet-base-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-mpnet-base-v2/e8c3b32edf5434bc2275fc9bab85f82640a19130/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-mpnet-base-v2 "HTTP/1.1 200 OK"
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 47.71it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.50it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 51.15it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 51.54it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.55it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.60it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 57.11it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.12it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 54.10it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 49.04it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 58.06it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 49.92it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 46.47it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 36.71it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 39.89it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 46.79it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 46.38it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 51.38it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 51.26it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.46it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 53.84it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 49.98it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 57.61it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 49.95it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 51.84it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 48.80it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 54.02it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.55it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 47.59it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 51.25it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 48.62it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 47.60it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 54.13it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 51.86it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 58.79it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 53.90it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 57.37it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 62.65it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 58.81it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 56.78it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 58.81it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 50.10it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 45.04it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.46it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 53.92it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.62it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 64.42it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.62it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 57.07it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 58.97it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 60.50it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.42it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.61it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 57.23it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 50.04it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 50.01it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 47.51it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 57.09it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 58.82it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 56.24it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 62.49it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 57.63it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 56.04it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.64it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 62.50it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 50.00it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 50.94it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 62.36it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.49it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 58.43it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 47.59it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 48.48it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 52.64it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.16it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.55it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 58.80it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 55.51it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 47.70it/s]
+Wrote compare_report.json
+{
+  "per_text": [
+    {
+      "text": "My card was stolen and I need to transfer money.",
+      "rule": [
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.85,
+          "reason": "Detected 1 matching keyword(s): card was stolen",
+          "matchedKeywords": [
+            "card was stolen"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.75,
+          "reason": "Detected 1 matching keyword(s): transfer",
+          "matchedKeywords": [
+            "transfer"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.9047234535217286,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+          "matchedKeywords": [
+            "My card was stolen",
+            "Report a lost debit card"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.8921468257904053,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account', 'Move funds to my savings']",
+          "matchedKeywords": [
+            "I need to transfer money to another account",
+            "Move funds to my savings"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.6824688196182251,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "Show me my current balance"
+          ]
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.6793576717376709,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']",
+          "matchedKeywords": [
+            "I forgot my PIN",
+            "I need to reset my PIN"
+          ]
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.586233189702034,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    },
+    {
+      "text": "What is my account balance?",
+      "rule": [
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.95,
+          "reason": "Detected 2 matching keyword(s): balance, account balance",
+          "matchedKeywords": [
+            "balance",
+            "account balance"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.95,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'How much money do I have in my account?']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "How much money do I have in my account?"
+          ]
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.8471990108489991,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['How much do I owe on my loan?', 'Tell me about my mortgage']",
+          "matchedKeywords": [
+            "How much do I owe on my loan?",
+            "Tell me about my mortgage"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.7586205065250397,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account', 'Move funds to my savings']",
+          "matchedKeywords": [
+            "I need to transfer money to another account",
+            "Move funds to my savings"
+          ]
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.6965301215648652,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+          "matchedKeywords": [
+            "My card was stolen",
+            "Report a lost debit card"
+          ]
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.694696170091629,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']",
+          "matchedKeywords": [
+            "I forgot my PIN",
+            "I need to reset my PIN"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "I forgot my PIN and need a reset",
+      "rule": [
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.85,
+          "reason": "Detected 1 matching keyword(s): forgot my pin",
+          "matchedKeywords": [
+            "forgot my pin"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.95,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I need to reset my PIN', 'I forgot my PIN']",
+          "matchedKeywords": [
+            "I need to reset my PIN",
+            "I forgot my PIN"
+          ]
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.7667933583259583,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+          "matchedKeywords": [
+            "My card was stolen",
+            "Report a lost debit card"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.6512871742248535,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?']",
+          "matchedKeywords": [
+            "What is my account balance?"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.6063514292240143,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.5798649102449417,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    },
+    {
+      "text": "What is my loan status?",
+      "rule": [
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.95,
+          "reason": "Detected 2 matching keyword(s): loan status, loan",
+          "matchedKeywords": [
+            "loan",
+            "loan status"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.95,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['What is the status of my loan?', 'How much do I owe on my loan?']",
+          "matchedKeywords": [
+            "What is the status of my loan?",
+            "How much do I owe on my loan?"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.741259765625,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'How much money do I have in my account?']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "How much money do I have in my account?"
+          ]
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.6384320259094238,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.5880457729101181,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.583041888475418,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    },
+    {
+      "text": "Hello there!",
+      "rule": [
+        {
+          "intent": "UNKNOWN",
+          "confidence": 0.0,
+          "reason": "No matching intent keywords found.",
+          "matchedKeywords": []
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.5788153886795044,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.5784883826971055,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.5778956055641175,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.5660380512475968,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['none']",
+          "matchedKeywords": []
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.5553201362490654,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    },
+    {
+      "text": "Please transfer funds to my savings account",
+      "rule": [
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.75,
+          "reason": "Detected 1 matching keyword(s): transfer",
+          "matchedKeywords": [
+            "transfer"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.9289856791496276,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['Move funds to my savings', 'I need to transfer money to another account']",
+          "matchedKeywords": [
+            "Move funds to my savings",
+            "I need to transfer money to another account"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.7476361274719239,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "Show me my current balance"
+          ]
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.681091970205307,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['Tell me about my mortgage']",
+          "matchedKeywords": [
+            "Tell me about my mortgage"
+          ]
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.6625209450721741,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN']",
+          "matchedKeywords": [
+            "I forgot my PIN"
+          ]
+        },
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.6533658325672149,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen']",
+          "matchedKeywords": [
+            "My card was stolen"
+          ]
+        }
+      ]
+    },
+    {
+      "text": "I need to report my lost card immediately",
+      "rule": [
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.7999999999999999,
+          "reason": "Detected 1 matching keyword(s): lost card",
+          "matchedKeywords": [
+            "lost card"
+          ]
+        }
+      ],
+      "semantic": [
+        {
+          "intent": "CARD_BLOCK",
+          "confidence": 0.95,
+          "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+          "matchedKeywords": [
+            "My card was stolen",
+            "Report a lost debit card"
+          ]
+        },
+        {
+          "intent": "PIN_RESET",
+          "confidence": 0.8090432643890381,
+          "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']",
+          "matchedKeywords": [
+            "I forgot my PIN",
+            "I need to reset my PIN"
+          ]
+        },
+        {
+          "intent": "BALANCE_INQUIRY",
+          "confidence": 0.7045922160148621,
+          "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']",
+          "matchedKeywords": [
+            "What is my account balance?",
+            "Show me my current balance"
+          ]
+        },
+        {
+          "intent": "FUND_TRANSFER",
+          "confidence": 0.6658869028091431,
+          "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account']",
+          "matchedKeywords": [
+            "I need to transfer money to another account"
+          ]
+        },
+        {
+          "intent": "LOAN_QUERY",
+          "confidence": 0.6482030272483825,
+          "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+          "matchedKeywords": []
+        }
+      ]
+    }
+  ],
+  "compare": {
+    "avg_time_ms_a": 0.015971428573331132,
+    "avg_time_ms_b": 23.04128428555227,
+    "sample_output_a": [
+      {
+        "intent": "CARD_BLOCK",
+        "confidence": 0.85,
+        "reason": "Detected 1 matching keyword(s): card was stolen",
+        "matchedKeywords": [
+          "card was stolen"
+        ]
+      },
+      {
+        "intent": "FUND_TRANSFER",
+        "confidence": 0.75,
+        "reason": "Detected 1 matching keyword(s): transfer",
+        "matchedKeywords": [
+          "transfer"
+        ]
+      }
+    ],
+    "sample_output_b": [
+      {
+        "intent": "CARD_BLOCK",
+        "confidence": 0.9047234535217286,
+        "reason": "Semantic match to intent 'CARD_BLOCK' with top example(s): ['My card was stolen', 'Report a lost debit card']",
+        "matchedKeywords": [
+          "My card was stolen",
+          "Report a lost debit card"
+        ]
+      },
+      {
+        "intent": "FUND_TRANSFER",
+        "confidence": 0.8921468257904053,
+        "reason": "Semantic match to intent 'FUND_TRANSFER' with top example(s): ['I need to transfer money to another account', 'Move funds to my savings']",
+        "matchedKeywords": [
+          "I need to transfer money to another account",
+          "Move funds to my savings"
+        ]
+      },
+      {
+        "intent": "BALANCE_INQUIRY",
+        "confidence": 0.6824688196182251,
+        "reason": "Semantic match to intent 'BALANCE_INQUIRY' with top example(s): ['What is my account balance?', 'Show me my current balance']",
+        "matchedKeywords": [
+          "What is my account balance?",
+          "Show me my current balance"
+        ]
+      },
+      {
+        "intent": "PIN_RESET",
+        "confidence": 0.6793576717376709,
+        "reason": "Semantic match to intent 'PIN_RESET' with top example(s): ['I forgot my PIN', 'I need to reset my PIN']",
+        "matchedKeywords": [
+          "I forgot my PIN",
+          "I need to reset my PIN"
+        ]
+      },
+      {
+        "intent": "LOAN_QUERY",
+        "confidence": 0.586233189702034,
+        "reason": "Semantic match to intent 'LOAN_QUERY' with top example(s): ['none']",
+        "matchedKeywords": []
+      }
+    ]
+  }
+}

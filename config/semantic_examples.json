@@ -1,0 +1,27 @@
+{
+  "BALANCE_INQUIRY": [
+    "What is my account balance?",
+    "How much money do I have in my account?",
+    "Show me my current balance"
+  ],
+  "FUND_TRANSFER": [
+    "I need to transfer money to another account",
+    "Send money to my friend",
+    "Move funds to my savings"
+  ],
+  "CARD_BLOCK": [
+    "My card was stolen",
+    "I need to block my credit card",
+    "Report a lost debit card"
+  ],
+  "PIN_RESET": [
+    "I forgot my PIN",
+    "I need to reset my PIN",
+    "Change my PIN code"
+  ],
+  "LOAN_QUERY": [
+    "What is the status of my loan?",
+    "Tell me about my mortgage",
+    "How much do I owe on my loan?"
+  ]
+}

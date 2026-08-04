@@ -1,0 +1,8 @@
+{
+  "BALANCE_INQUIRY": "I can help with your balance inquiry. Please authenticate to continue.",
+  "FUND_TRANSFER": "I can help schedule a fund transfer. Please authenticate first.",
+  "CARD_BLOCK": "I can help block your card. Authentication is required.",
+  "PIN_RESET": "I can help reset your PIN. Please authenticate first.",
+  "LOAN_QUERY": "I can provide loan information. If this is about your account, authentication may be required.",
+  "UNKNOWN": "I am sorry, I did not understand your request. Can you please clarify?"
+}

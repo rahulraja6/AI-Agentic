@@ -1,0 +1,85 @@
+test_balance_inquiry_is_detected (test_banking_agent.BankingAgentTests.test_balance_inquiry_is_detected) ... INFO:banking_agent:Handling request: What is my account balance?
+ok
+test_card_theft_and_transfer_prefers_card_block (test_banking_agent.BankingAgentTests.test_card_theft_and_transfer_prefers_card_block) ... INFO:banking_agent:Handling request: My card was stolen and I need to transfer money.
+ok
+test_complex_multi_intent_request_is_ranked (test_banking_agent.BankingAgentTests.test_complex_multi_intent_request_is_ranked) ... INFO:banking_agent:Handling request: My card was stolen, I need to transfer money, and I also want to check my loan status.
+ok
+test_empty_input_returns_unknown (test_banking_agent.BankingAgentTests.test_empty_input_returns_unknown) ... INFO:banking_agent:Handling request:    
+ok
+test_load_config_reads_json_files (test_banking_agent.BankingAgentTests.test_load_config_reads_json_files) ... ok
+test_loan_query_is_detected (test_banking_agent.BankingAgentTests.test_loan_query_is_detected) ... INFO:banking_agent:Handling request: What is my loan status?
+ok
+test_pin_reset_is_detected (test_banking_agent.BankingAgentTests.test_pin_reset_is_detected) ... INFO:banking_agent:Handling request: I forgot my PIN and need a reset
+ok
+test_secondary_intent_is_present_for_mixed_request (test_banking_agent.BankingAgentTests.test_secondary_intent_is_present_for_mixed_request) ... INFO:banking_agent:Handling request: I lost my card and also need to transfer money
+ok
+test_semantic_classifier_can_be_selected_via_config (test_banking_agent.BankingAgentTests.test_semantic_classifier_can_be_selected_via_config) ... INFO:sentence_transformers.base.model:No device provided, using cpu
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+INFO:sentence_transformers.base.model:Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+Input: What is my account balance?
+Output: {'primaryIntent': 'BALANCE_INQUIRY', 'secondaryIntent': None, 'confidence': 0.88, 'requiresAuthentication': True, 'response': 'I can help with your balance inquiry. Please authenticate to continue.', 'reason': 'Detected 2 matching keyword(s): balance, account balance', 'matchedKeywords': ['balance', 'account balance'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:00.659744+00:00', 'processingTimeMs': 0}}
+Input: My card was stolen and I need to transfer money.
+Output: {'primaryIntent': 'CARD_BLOCK', 'secondaryIntent': 'FUND_TRANSFER', 'confidence': 0.81, 'requiresAuthentication': True, 'response': 'I can help block your card. Authentication is required.', 'reason': 'Detected 1 matching keyword(s): card was stolen', 'matchedKeywords': ['card was stolen'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:00.659744+00:00', 'processingTimeMs': 0}}
+Input: My card was stolen, I need to transfer money, and I also want to check my loan status.
+Output: {'primaryIntent': 'LOAN_QUERY', 'secondaryIntent': 'CARD_BLOCK', 'confidence': 0.88, 'requiresAuthentication': True, 'response': 'I can provide loan information. If this is about your account, authentication may be required.', 'reason': 'Detected 2 matching keyword(s): loan status, loan', 'matchedKeywords': ['loan', 'loan status'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:00.660975+00:00', 'processingTimeMs': 0}}
+Input:    
+Output: {'primaryIntent': 'UNKNOWN', 'secondaryIntent': None, 'confidence': 0.0, 'requiresAuthentication': False, 'response': 'I am sorry, I did not understand your request. Can you please clarify?', 'reason': 'No input provided.', 'matchedKeywords': [], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:00.663045+00:00', 'processingTimeMs': 0}}
+Input: What is my loan status?
+Output: {'primaryIntent': 'LOAN_QUERY', 'secondaryIntent': None, 'confidence': 0.88, 'requiresAuthentication': True, 'response': 'I can provide loan information. If this is about your account, authentication may be required.', 'reason': 'Detected 2 matching keyword(s): loan status, loan', 'matchedKeywords': ['loan', 'loan status'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:00.664107+00:00', 'processingTimeMs': 0}}
+Input: I forgot my PIN and need a reset
+Output: {'primaryIntent': 'PIN_RESET', 'secondaryIntent': None, 'confidence': 0.81, 'requiresAuthentication': True, 'response': 'I can help reset your PIN. Please authenticate first.', 'reason': 'Detected 1 matching keyword(s): forgot my pin', 'matchedKeywords': ['forgot my pin'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:00.665126+00:00', 'processingTimeMs': 0}}
+Input: I lost my card and also need to transfer money
+Output: {'primaryIntent': 'CARD_BLOCK', 'secondaryIntent': 'FUND_TRANSFER', 'confidence': 0.81, 'requiresAuthentication': True, 'response': 'I can help block your card. Authentication is required.', 'reason': 'Detected 1 matching keyword(s): lost my card', 'matchedKeywords': ['lost my card'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:00.665126+00:00', 'processingTimeMs': 0}}
+C:\Users\ra282\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py:580: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  if rate and total else datetime.utcfromtimestamp(0))
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 8231.65it/s]
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+INFO:httpx:HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+C:\Users\ra282\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py:580: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  if rate and total else datetime.utcfromtimestamp(0))
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|##########| 1/1 [00:00<00:00, 166.61it/s]
+ok
+test_transfer_only_returns_fund_transfer (test_banking_agent.BankingAgentTests.test_transfer_only_returns_fund_transfer) ... INFO:banking_agent:Handling request: I need to transfer money to my brother
+ok
+test_unknown_request_returns_unknown_intent (test_banking_agent.BankingAgentTests.test_unknown_request_returns_unknown_intent) ... INFO:banking_agent:Handling request: Hello there!
+ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 5.238s
+
+OK
+Input: I need to transfer money to my brother
+Output: {'primaryIntent': 'FUND_TRANSFER', 'secondaryIntent': None, 'confidence': 0.74, 'requiresAuthentication': True, 'response': 'I can help schedule a fund transfer. Please authenticate first.', 'reason': 'Detected 1 matching keyword(s): transfer', 'matchedKeywords': ['transfer'], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:05.893475+00:00', 'processingTimeMs': 0}}
+Input: Hello there!
+Output: {'primaryIntent': 'UNKNOWN', 'secondaryIntent': None, 'confidence': 0.0, 'requiresAuthentication': False, 'response': 'I am sorry, I did not understand your request. Can you please clarify?', 'reason': 'No matching intent keywords found.', 'matchedKeywords': [], 'metadata': {'agent': 'IntentAgent', 'version': '1.0', 'timestamp': '2026-08-02T02:49:05.895475+00:00', 'processingTimeMs': 0}}
