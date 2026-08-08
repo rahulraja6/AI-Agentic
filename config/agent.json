@@ -10,6 +10,6 @@
     "max": 0.95,
     "hybrid_rule_threshold": 0.8
   },
-  "classifier": "rule",
+  "classifier": "hybrid",
   "model_name": "all-mpnet-base-v2"
 }

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Agent Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --bg-light: #f8f9fa;
+        }
+        body {
+            background-color: #f4f6f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .header-card {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            border-radius: 12px;
+        }
+        .op-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background: #ffffff;
+            cursor: pointer;
+        }
+        .op-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            border-color: #0d6efd;
+        }
+        .example-chip {
+            background-color: #e9ecef;
+            color: #212529;
+            font-size: 0.82rem;
+            border-radius: 20px;
+            padding: 4px 12px;
+            display: inline-block;
+            margin: 3px 2px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            border: 1px solid #ced4da;
+        }
+        .example-chip:hover {
+            background-color: #0d6efd;
+            color: #ffffff;
+            border-color: #0d6efd;
+        }
+        .response-box {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e6ed;
+        }
+        .confidence-badge {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .auth-badge {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+<div class="container py-4">
+    <!-- Header -->
+    <div class="p-4 mb-4 header-card shadow-sm d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+            <h2 class="fw-bold mb-1"><i class="bi bi-bank me-2"></i>Smart Banking Agent</h2>
+            <p class="mb-0 text-light opacity-75">AI-Powered Intent Classifier & Banking Assistant</p>
+        </div>
+        <div class="text-end">
+            <span class="badge bg-success px-3 py-2"><i class="bi bi-circle-fill me-1 small"></i> Agent Active</span>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Supported Operations Sidebar / Limit Info -->
+        <div class="col-lg-5">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white border-bottom py-3">
+                    <h5 class="fw-bold mb-0 text-dark">
+                        <i class="bi bg-primary text-white p-1 rounded bi-shield-check me-2"></i>Supported Banking Operations
+                    </h5>
+                    <small class="text-muted">The banking agent is restricted to assist with the following operations only:</small>
+                </div>
+                <div class="card-body p-3">
+                    {% for op in operations %}
+                    <div class="op-card p-3 mb-3">
+                        <div class="d-flex justify-content-between align-items-start mb-1">
+                            <h6 class="fw-bold mb-0 text-primary">
+                                <i class="bi {{ op.icon }} me-2"></i>{{ op.title }}
+                            </h6>
+                            <span class="badge bg-secondary auth-badge">{{ op.badge }}</span>
+                        </div>
+                        <p class="small text-muted mb-2">{{ op.description }}</p>
+                        <div>
+                            <small class="fw-semibold text-dark d-block mb-1">Try example query:</small>
+                            {% for ex in op.examples %}
+                            <span class="example-chip" onclick="fillInput('{{ ex }}')">{{ ex }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat / Request Area -->
+        <div class="col-lg-7">
+            <div class="response-box p-4 mb-4">
+                <h5 class="fw-bold text-dark mb-3"><i class="bi bi-chat-left-text me-2 text-primary"></i>Ask Banking Agent</h5>
+                <form id="agentForm" onsubmit="submitRequest(event)">
+                    <div class="mb-3">
+                        <label for="requestInput" class="form-label text-muted small fw-bold">Enter your banking request:</label>
+                        <div class="input-group">
+                            <input type="text" id="requestInput" class="form-control form-control-lg" placeholder="e.g. My card was stolen and I need to block it" required>
+                            <button class="btn btn-primary px-4 fw-bold" type="submit" id="submitBtn">
+                                <span id="btnText"><i class="bi bi-send-fill me-1"></i> Submit</span>
+                                <span id="btnSpinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Warning banner for unsupported operations -->
+                <div class="alert alert-info py-2 px-3 small d-flex align-items-center mb-0">
+                    <i class="bi bi-info-circle-fill me-2 fs-5 text-info"></i>
+                    <span>Requests outside the 5 supported operations will be classified as <strong>UNKNOWN</strong> and safely prompted for clarification.</span>
+                </div>
+            </div>
+
+            <!-- Agent Output Card -->
+            <div id="outputContainer" class="d-none">
+                <div class="card border-0 shadow-sm rounded-3">
+                    <div class="card-header bg-white border-bottom py-3 d-flex justify-content-between align-items-center">
+                        <h5 class="fw-bold mb-0"><i class="bi bi-robot me-2 text-primary"></i>Agent Response Analysis</h5>
+                        <span id="intentBadge" class="badge bg-primary px-3 py-2 confidence-badge"></span>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded border">
+                                    <small class="text-muted d-block fw-bold mb-1">Primary Intent</small>
+                                    <span id="primaryIntent" class="fw-bold text-dark fs-5"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded border">
+                                    <small class="text-muted d-block fw-bold mb-1">Confidence Score</small>
+                                    <div class="d-flex align-items-center">
+                                        <div class="progress flex-grow-1 me-2" style="height: 10px;">
+                                            <div id="confidenceBar" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                                        </div>
+                                        <span id="confidenceVal" class="fw-bold text-dark"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response Message -->
+                        <div id="authAlert" class="alert d-flex align-items-center mb-3">
+                            <i id="authIcon" class="bi me-2 fs-5"></i>
+                            <div id="responseText" class="fw-semibold"></div>
+                        </div>
+
+                        <!-- Secondary Intent & Reasoning -->
+                        <div class="p-3 bg-light rounded border mb-3">
+                            <div class="row g-2">
+                                <div class="col-md-6">
+                                    <small class="text-muted fw-bold d-block">Secondary Intent:</small>
+                                    <span id="secondaryIntent" class="badge bg-outline-secondary text-dark border">None</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <small class="text-muted fw-bold d-block">Auth Required:</small>
+                                    <span id="authRequired" class="badge bg-danger">Yes</span>
+                                </div>
+                            </div>
+                            <hr class="my-2 text-muted">
+                            <small class="text-muted fw-bold d-block mb-1">Classification Reason:</small>
+                            <span id="reasonText" class="small text-dark font-monospace"></span>
+                        </div>
+
+                        <!-- Metadata -->
+                        <div class="d-flex justify-content-between align-items-center text-muted small">
+                            <span><i class="bi bi-clock me-1"></i>Processing Time: <strong id="procTime">0 ms</strong></span>
+                            <span><i class="bi bi-cpu me-1"></i>Model: <strong id="agentModel">IntentAgent v1.0</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function fillInput(text) {
+        document.getElementById('requestInput').value = text;
+        document.getElementById('requestInput').focus();
+    }
+
+    async function submitRequest(event) {
+        event.preventDefault();
+        const inputField = document.getElementById('requestInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const userText = inputField.value.trim();
+
+        if (!userText) return;
+
+        btnText.classList.add('d-none');
+        btnSpinner.classList.remove('d-none');
+        submitBtn.disabled = true;
+
+        try {
+            const res = await fetch('/api/process', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ request: userText })
+            });
+
+            const data = await res.json();
+            displayOutput(data);
+        } catch (err) {
+            alert('Error communicating with banking agent server.');
+        } finally {
+            btnText.classList.remove('d-none');
+            btnSpinner.classList.add('d-none');
+            submitBtn.disabled = false;
+        }
+    }
+
+    function displayOutput(data) {
+        const outputContainer = document.getElementById('outputContainer');
+        outputContainer.classList.remove('d-none');
+
+        document.getElementById('primaryIntent').innerText = data.primaryIntent;
+        document.getElementById('intentBadge').innerText = data.primaryIntent;
+
+        const confPct = Math.round(data.confidence * 100);
+        document.getElementById('confidenceVal').innerText = confPct + '%';
+        const bar = document.getElementById('confidenceBar');
+        bar.style.width = confPct + '%';
+        if (confPct >= 80) bar.className = 'progress-bar bg-success';
+        else if (confPct >= 50) bar.className = 'progress-bar bg-warning';
+        else bar.className = 'progress-bar bg-danger';
+
+        document.getElementById('responseText').innerText = data.response;
+
+        const authAlert = document.getElementById('authAlert');
+        const authIcon = document.getElementById('authIcon');
+        if (data.requiresAuthentication) {
+            authAlert.className = 'alert alert-warning d-flex align-items-center mb-3';
+            authIcon.className = 'bi bi-shield-lock-fill me-2 fs-5 text-warning';
+            document.getElementById('authRequired').className = 'badge bg-danger';
+            document.getElementById('authRequired').innerText = 'Authentication Required';
+        } else {
+            authAlert.className = 'alert alert-success d-flex align-items-center mb-3';
+            authIcon.className = 'bi bi-check-circle-fill me-2 fs-5 text-success';
+            document.getElementById('authRequired').className = 'badge bg-success';
+            document.getElementById('authRequired').innerText = 'No Auth Required';
+        }
+
+        document.getElementById('secondaryIntent').innerText = data.secondaryIntent || 'None';
+        document.getElementById('reasonText').innerText = data.reason || 'N/A';
+        document.getElementById('procTime').innerText = (data.metadata?.processingTimeMs || 0) + ' ms';
+        document.getElementById('agentModel').innerText = (data.metadata?.agent || 'IntentAgent') + ' v' + (data.metadata?.version || '1.0');
+
+        outputContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>

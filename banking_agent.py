@@ -529,35 +529,53 @@ class StubAgent(Agent):
 
 
 class MemoryAgent(StubAgent):
-    pass
+    """Simple memory agent to store context between turns."""
+    def __init__(self):
+        self.history = []
+
+    def execute(self, request: str) -> dict:
+        self.history.append(request)
+        return {"agent": "MemoryAgent", "last_request": request, "history_len": len(self.history)}
 
 
 class PlannerAgent(StubAgent):
-    pass
-
-
-class FraudAgent(StubAgent):
-    pass
-
-
-class NotificationAgent(StubAgent):
-    pass
-
-
-class Orchestrator:
-    """Simple orchestrator that depends only on the common Agent interface."""
-
-    def __init__(self, agent: Agent):
-        self.agent = agent
+    """Agent to orchestrate multiple sub-agents."""
+    def __init__(self, agents: dict[str, Agent]):
+        self.agents = agents
 
     def execute(self, request: str) -> dict:
-        return self.agent.execute(request)
+        # Example logic: Always route to IntentAgent
+        return self.agents["intent"].execute(request)
+
+
+class Orchestrator(Agent):
+    """Orchestrates requests across multiple specialized agents."""
+    def __init__(self, agents: dict[str, Agent]):
+        self.agents = agents
+        self.memory = agents.get("memory")
+
+    def execute(self, request: str) -> dict:
+        # 1. Update memory
+        if self.memory:
+            self.memory.execute(request)
+
+        # 2. Basic routing logic
+        intent_agent = self.agents.get("intent")
+        return intent_agent.execute(request)
 
 
 def build_response(text: str, agent: Agent | None = None) -> dict:
     """Compatibility wrapper with dependency injection support."""
     if agent is None:
-        agent = IntentAgent()
+        # Initialize memory and intent agent
+        memory = MemoryAgent()
+        intent_agent = IntentAgent()
+        
+        # Assemble orchestrator
+        agent = Orchestrator({
+            "memory": memory,
+            "intent": intent_agent
+        })
     return agent.execute(text)
 
 

@@ -6,11 +6,13 @@
     "account (balance|total|amount)"
   ],
   "FUND_TRANSFER": [
-    "transfer",
+        "transfer",
     "send .*money",
     "pay .*to",
     "move .*funds",
-    "wire"
+    "wire",
+    "limit",
+    "paid"
   ],
   "CARD_BLOCK": [
     "\\b(block|blocked|freeze|frozen|disable|disabled)\\b.*\\bcard\\b",
