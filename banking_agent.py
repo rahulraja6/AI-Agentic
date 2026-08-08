@@ -61,6 +61,9 @@ def load_config(config_dir: Path | None = None) -> dict:
     except FileNotFoundError as exc:
         logger.exception("Missing configuration file: %s", exc.filename)
         raise
+    except json.JSONDecodeError as exc:
+        logger.exception("Corrupt JSON in configuration file: %s", exc)
+        raise
 
 
 def compile_keywords(keywords: dict[str, list[str]]) -> dict[str, list[tuple[str, re.Pattern]]]:
@@ -97,13 +100,14 @@ class IntentClassifier:
                 match = pattern.search(normalized)
                 if match:
                     matched_patterns.append((pattern_text, match.group(0)))
-                    matched_keywords.append(match.group(0)) 
+                    matched_keywords.append(match.group(0))
 
             if not matched_patterns:
                 continue
 
             match_count = len(matched_patterns)
-            matched_text = " ".join({match for _, match in matched_patterns})
+            unique_matches = {match for _, match in matched_patterns}
+            matched_text = " ".join(unique_matches)
             matched_word_count = len(set(re.findall(r"\b\w+\b", matched_text)))
             phrase_strength = min(matched_word_count / 4, 1.0)
 
@@ -114,7 +118,7 @@ class IntentClassifier:
             )
             confidence = min(confidence, self.confidence_config.get("max", 0.95))
 
-            matched_texts = ", ".join({match for _, match in matched_patterns})
+            matched_texts = ", ".join(unique_matches)
             reason = f"Detected {match_count} matching keyword(s): {matched_texts}"
 
             candidates.append({
@@ -517,24 +521,27 @@ class IntentAgent(Agent):
         return self.response_generator.build_response(request)
 
 
-class MemoryAgent(Agent):
+class StubAgent(Agent):
+    """Base class for stub agent implementations."""
+
     def execute(self, request: str) -> dict:
-        return {"agent": "MemoryAgent", "request": request, "status": "not_implemented"}
+        return {"agent": self.__class__.__name__, "request": request, "status": "not_implemented"}
 
 
-class PlannerAgent(Agent):
-    def execute(self, request: str) -> dict:
-        return {"agent": "PlannerAgent", "request": request, "status": "not_implemented"}
+class MemoryAgent(StubAgent):
+    pass
 
 
-class FraudAgent(Agent):
-    def execute(self, request: str) -> dict:
-        return {"agent": "FraudAgent", "request": request, "status": "not_implemented"}
+class PlannerAgent(StubAgent):
+    pass
 
 
-class NotificationAgent(Agent):
-    def execute(self, request: str) -> dict:
-        return {"agent": "NotificationAgent", "request": request, "status": "not_implemented"}
+class FraudAgent(StubAgent):
+    pass
+
+
+class NotificationAgent(StubAgent):
+    pass
 
 
 class Orchestrator:
@@ -560,7 +567,11 @@ def main() -> None:
     if len(sys.argv) > 1:
         user_input = " ".join(sys.argv[1:])
     else:
-        user_input = input("Enter a banking request: ")
+        try:
+            user_input = input("Enter a banking request: ")
+        except (EOFError, KeyboardInterrupt):
+            logger.info("Exiting on EOF or user interrupt.")
+            return
 
     result = build_response(user_input)
     print(json.dumps(result, indent=2))
